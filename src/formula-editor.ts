@@ -20,19 +20,19 @@ const empty = (expr: any) => Boolean(expr);
 const not = (expr: any) => !expr;
 
 // Actual Formula
-const formula = () =>
-  If(prop("Status") == "Dive in" || prop("Status") == "👉 Next",
-    empty(prop("Dive in due date")) ? "📅Please select a dive due Date" :
-      join("", "Dive: ", format(prop("Dive in due date"))),
-    If(prop("Status") == "Dev",
-      empty(prop("Dev due date")) ? "📅Please select a dev due Date" :
-        join("", "Dev: ", format(prop("Dev due date"))),
-      ""
-    )
+const formula = If(prop("Status") == "Dive in" || prop("Status") == "👉 Next",
+  empty(prop("Dive in due date")) ? "📅Please select a dive due Date" :
+    join("", "Dive: ", format(prop("Dive in due date"))),
+  If(prop("Status") == "Dev",
+    empty(prop("Dev due date")) ? "📅Please select a dev due Date" :
+      join("", "Dev: ", format(prop("Dev due date"))),
+    ""
   )
+)
 
-// same formula as above but ON A SINGLE LINE, replace "If" with "if", "||" with "or", and remove "const formula = () =>"
+// same formula as above but ON A SINGLE LINE, replace "If" with "if", "||" with "or", and remove "const formula ="
+
 
 
 // this test the formula here
-console.log(formula())
+console.log(formula)
