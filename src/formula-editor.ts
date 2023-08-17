@@ -32,8 +32,6 @@ const formula = () =>
   )
 
 // same formula as above but ON A SINGLE LINE, replace "If" with "if", "||" with "or", and remove "const formula = () =>"
-// if(prop("Status") == "Dive in" or prop("Status") == "👉 Next", empty(prop("Dive in due date")) ? "📅Please select a dive due Date" : join("", "Dive: ", format(prop("Dive in due date"))), if(prop("Status") == "Dev", empty(prop("Dev due date")) ? "📅Please select a dev due Date" : join("", "Dev: ", format(prop("Dev due date"))), ""))
-
 
 
 // this test the formula here
