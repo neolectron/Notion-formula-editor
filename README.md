@@ -7,14 +7,14 @@ Leverage github copilot completion to write and test typesafe Notion formulas
 - clone the project
 - `npm i`
 - `npm run dev` to watch your formulas result.
-- open `src/formula-editor.ts` and replace the type with the type of your notion database properties
-- create a database item inside the `testTicket` variable
+- open `src/editor.ts` and replace the `Item` type with the type of your notion database properties
+- create a database item inside the `testItem` variable
 - code your formula inside the `formula` function
-- go on the line right after the comment that starts with "same formula as above" and wait for copilot completion to get your formula
+- watch your console, the notion formula is live-tested on your item and printed in notion format.
 
 ## Notes
 
-- Not all notion formulas fonction are available, but it is extremely easy to add your own, just look at the code.
+- Not all notion formulas fonction are available, but it is extremely easy to add your own inside `src/notionFunctions.ts`
 
 ## The "Maybe" roadmap
 
