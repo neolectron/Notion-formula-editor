@@ -1,6 +1,6 @@
 # Notion formula editor
 
-Leverage github copilot completion to write and test typesafe Notion formulas
+Typesafe Notion formulas using typescript syntax.
 
 ### How to use :
 
@@ -14,14 +14,21 @@ Leverage github copilot completion to write and test typesafe Notion formulas
 
 ## Notes
 
+- You must write all notion functions capitalized : `Props`, `Join`, `Empty` etc..
+- You must use JS keywords:  `and` beeing `&&`, `or` beeing `||`.
 - Not all notion formulas fonction are available, but it is extremely easy to add your own inside `src/notionFunctions.ts`
+- Some javascript features that doesn't exists in notion won't work (like `if`, `while` etc).
 
 ## The "Maybe" roadmap
 
-- Making a chrome extension
-- When you open Notion's formula editor, opens up a monaco editor (vscode) instead.
-- A typescript type is automatically generated with the shape of your notion database, live generated.
-- You type your formula in plain JS with a syntax that ressemble notion's one
-- The syntax only differs on capitalized functions, keyword `and` beeing `&&`, `or` beeing `||` etc.
-- The syntax has some javascript features disabled (const/var/let/if/while/etc, basically all keywords)
-- Everything is type-safe, autocompleted, colorized, and edits directly the formula in the background.
+### v1
+- [ ] Make a frontend with monaco editor
+- [ ] disable js keywords that are illegal in notion editor
+- [ ] live output the notion formula and it's result
+- [ ] allow usage of notion api to get type informations about the Db
+
+### v2
+- [ ] Make a chrome extension to directly use the product on Notion website.
+- [ ] When you open Notion's formula editor, open my editor instead
+- [ ] A typescript type is automatically generated with the shape of your notion database, live generated.
+- [ ] Edits directly the formula in Notion in the background.
