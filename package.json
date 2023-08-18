@@ -1,14 +1,18 @@
 {
   "name": "notion-formula-editor",
-  "version": "1.0.0",
   "description": "Leverage github copilot completion to write and test typesafe Notion formulas",
-  "scripts": {
-    "dev": "tsup src/formula-editor.ts --watch --onSuccess \"node dist/formula-editor.js\""
-  },
-  "keywords": [],
   "author": "neolectron",
   "license": "MIT",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20.5.0",
+    "npm": ">=9"
+  },
+  "scripts": {
+    "dev": "tsup src/editor.ts --watch --onSuccess \"node dist/editor.js\""
+  },
   "devDependencies": {
+    "@types/node": "^20.5.0",
     "tsup": "^7.2.0",
     "typescript": "^5.1.6"
   }
